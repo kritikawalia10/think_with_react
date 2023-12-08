@@ -12,9 +12,29 @@
    <!-- Load the React Library  -->
    <!-- React and React DOM -->
       <!-- Include babel compiler -->
-      <script type="text/babel" src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+      <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+     <script type="text/babel">
+      class ReactContainer extends React.Component{
+    // JSX tags
+    // JSX there should be one parent element
+      render(){
+          return (
+            <>
+            <div>Hello! Welcome to Kalvium   
+             <div>This is babel</div>
+         </div>
+            </>
+           )
+      };  
+  }
+
+const container = document.getElementById('react-container');
+// Direclty pass the component to render
+ReactDOM.render(<ReactContainer/>,container);    
+ </script>
   
   <!-- Include the react element -->
    <script src="./app.js"></script>
